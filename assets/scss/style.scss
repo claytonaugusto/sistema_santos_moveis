@@ -1,0 +1,86 @@
+@import 'reset.scss';
+@import 'background_color.scss';
+@import 'border_lines.scss';
+@import 'button_color.scss';
+@import 'buttons.scss';
+@import 'font_color.scss';
+@import 'font_size.scss';
+@import 'icons.scss';
+@import 'mixins.scss';
+.content{
+    width: 88%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+}
+.login{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-items: center;
+    justify-content: space-around;
+    align-items: center;
+
+    .login-left, .login-right{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+        
+        .login-left-text{
+            color: $white;
+            h2{
+                font-size: $font-size-welcome;
+                padding-bottom: 1%;
+            }
+            p{
+                font-size: $font-size-welcome-text;
+                font-weight: 200;
+            }
+        }
+        .login-right-text{
+            width: 70%;
+            h2{
+                font-size: $font-size-h2;
+                color: $black;
+            }
+            form{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                padding: 2% 0;
+    
+                input[type=text],
+                input[type=password]{
+                    width: 100%;
+                    height: 40px;
+                    margin: 1% 0;
+                    @include border-radius(30px);
+                    @include border(1px solid $c-gray);
+                    color: $gray-light;
+                    font-size: $font-small;
+                    padding: 10px;
+                }
+                input[type=submit]{
+                    @include button;
+                    cursor: pointer;
+                }
+            }
+            a{
+                text-decoration: none;
+                text-align: center;
+                font-size: $font-small;
+                color: $blue-password;
+            }
+    }
+    }
+    .login-left{
+        background: $bg-login-left;
+    }
+    .login-right{
+        background: none;
+    }
+}

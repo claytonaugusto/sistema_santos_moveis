@@ -1,0 +1,13 @@
+@mixin button{
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    background: linear-gradient(to right,#47c75c, #20AF7C);;
+    border-radius: 30px;
+    color: $white;
+    transition: 1s;
+
+    &:hover{
+        background: linear-gradient(to right,#20AF7C, #47c75c);
+    }
+}

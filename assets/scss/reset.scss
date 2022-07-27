@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500&display=swap');
+* {
+    /* Remove default margin on everything */
+    margin: 0;
+    /* Remove default padding on everything */
+    padding: 0;
+    /* Calc `em` based line height, bigger line height for smaller font size and smaller line height for bigger font size: https://kittygiraudel.com/2020/05/18/using-calc-to-figure-out-optimal-line-height/ */
+    line-height: calc(0.25rem + 1em + 0.25rem);
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* Use a more-intuitive box-sizing model on everything */
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+  }
+ /* Remove border and set sensible defaults for backgrounds, on all elements except fieldset progress and meter */
+  *:where(:not(fieldset, progress, meter)) {
+    border-width: 0;
+    border-style: solid;
+    background-origin: border-box;
+    background-repeat: no-repeat;
+  }
+  html {
+    /* Allow percentage-based heights in the application */
+    block-size: 100%;
+    /* Making sure text size is only controlled by font-size */
+    -webkit-text-size-adjust: none;
+  }
+  body{
+    line-height: calc(1em + 0.5rem);
+  }
+  
+/* Improve media defaults */
+img, svg, video, canvas, audio, iframe, embed, object {
+    display: block;
+    max-width: 100%;
+  }
+img, svg, video {
+    block-size: auto;
+    max-inline-size: 100%;
+  }
+  
+  /* Remove stroke and set fill colour to the inherited font colour */
+svg {
+    stroke: none;
+    fill: currentColor;
+  }
+  /* SVG's without a fill attribute */
+svg, :not([fill]) {
+    /* Remove fill and set stroke colour to the inherited font colour */
+    stroke: currentColor;
+    fill: none;
+    /* Rounded stroke */
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  
+  /* Set a size for SVG's without a width attribute */
+  :where(svg):where(:not([width])) {
+    inline-size: 5rem;
+  }
+/* Avoid text overflows */
+:where(p, h1, h2, h3, h4, h5, h6) {
+    overflow-wrap: break-word;
+  }
+  /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+:where(ul, ol)[role="list"] {
+    list-style: none;
+  }
+
+/* Disabled cursor for disabled buttons */
+:where(button, button[type], input[type="button"], input[type="submit"], input[type="reset"])[disabled] {
+  cursor: not-allowed;
+}
+input[type]:focus{
+  outline: 0;
+}

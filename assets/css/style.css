@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500&display=swap");
+* {
+  /* Remove default margin on everything */
+  margin: 0;
+  /* Remove default padding on everything */
+  padding: 0;
+  /* Calc `em` based line height, bigger line height for smaller font size and smaller line height for bigger font size: https://kittygiraudel.com/2020/05/18/using-calc-to-figure-out-optimal-line-height/ */
+  line-height: calc(0.25rem + 1em + 0.25rem);
+  font-family: 'Inter', sans-serif; }
+
+/* Use a more-intuitive box-sizing model on everything */
+*,
+::before,
+::after {
+  box-sizing: border-box; }
+
+/* Remove border and set sensible defaults for backgrounds, on all elements except fieldset progress and meter */
+*:where(:not(fieldset, progress, meter)) {
+  border-width: 0;
+  border-style: solid;
+  background-origin: border-box;
+  background-repeat: no-repeat; }
+
+html {
+  /* Allow percentage-based heights in the application */
+  block-size: 100%;
+  /* Making sure text size is only controlled by font-size */
+  -webkit-text-size-adjust: none; }
+
+body {
+  line-height: calc(1em + 0.5rem); }
+
+/* Improve media defaults */
+img, svg, video, canvas, audio, iframe, embed, object {
+  display: block;
+  max-width: 100%; }
+
+img, svg, video {
+  block-size: auto;
+  max-inline-size: 100%; }
+
+/* Remove stroke and set fill colour to the inherited font colour */
+svg {
+  stroke: none;
+  fill: currentColor; }
+
+/* SVG's without a fill attribute */
+svg, :not([fill]) {
+  /* Remove fill and set stroke colour to the inherited font colour */
+  stroke: currentColor;
+  fill: none;
+  /* Rounded stroke */
+  stroke-linecap: round;
+  stroke-linejoin: round; }
+
+/* Set a size for SVG's without a width attribute */
+:where(svg):where(:not([width])) {
+  inline-size: 5rem; }
+
+/* Avoid text overflows */
+:where(p, h1, h2, h3, h4, h5, h6) {
+  overflow-wrap: break-word; }
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+:where(ul, ol)[role="list"] {
+  list-style: none; }
+
+/* Disabled cursor for disabled buttons */
+:where(button, button[type], input[type="button"], input[type="submit"], input[type="reset"])[disabled] {
+  cursor: not-allowed; }
+
+input[type]:focus {
+  outline: 0; }
+
+.content {
+  width: 88%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0; }
+
+.login {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-items: center;
+  justify-content: space-around;
+  align-items: center; }
+  .login .login-left, .login .login-right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left; }
+    .login .login-left .login-left-text, .login .login-right .login-left-text {
+      color: #fff; }
+      .login .login-left .login-left-text h2, .login .login-right .login-left-text h2 {
+        font-size: 28px;
+        padding-bottom: 1%; }
+      .login .login-left .login-left-text p, .login .login-right .login-left-text p {
+        font-size: 18px;
+        font-weight: 200; }
+    .login .login-left .login-right-text, .login .login-right .login-right-text {
+      width: 70%; }
+      .login .login-left .login-right-text h2, .login .login-right .login-right-text h2 {
+        font-size: 22px;
+        color: #000; }
+      .login .login-left .login-right-text form, .login .login-right .login-right-text form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 2% 0; }
+        .login .login-left .login-right-text form input[type=text],
+        .login .login-left .login-right-text form input[type=password], .login .login-right .login-right-text form input[type=text],
+        .login .login-right .login-right-text form input[type=password] {
+          width: 100%;
+          height: 40px;
+          margin: 1% 0;
+          -webkit-border-radius: 30px;
+          -moz-border-radius: 30px;
+          -ms-border-radius: 30px;
+          border-radius: 30px;
+          -webkit-border: 1px solid #BFBEBE;
+          -moz-border: 1px solid #BFBEBE;
+          -ms-border: 1px solid #BFBEBE;
+          border: 1px solid #BFBEBE;
+          color: #BFBEBE;
+          font-size: 12px;
+          padding: 10px; }
+        .login .login-left .login-right-text form input[type=submit], .login .login-right .login-right-text form input[type=submit] {
+          width: 100%;
+          height: 40px;
+          padding: 5px;
+          background: linear-gradient(to right, #47c75c, #20AF7C);
+          border-radius: 30px;
+          color: #fff;
+          transition: 1s;
+          cursor: pointer; }
+          .login .login-left .login-right-text form input[type=submit]:hover, .login .login-right .login-right-text form input[type=submit]:hover {
+            background: linear-gradient(to right, #20AF7C, #47c75c); }
+      .login .login-left .login-right-text a, .login .login-right .login-right-text a {
+        text-decoration: none;
+        text-align: center;
+        font-size: 12px;
+        color: #007499; }
+  .login .login-left {
+    background: linear-gradient(65deg, #040C54, #3769E9); }
+  .login .login-right {
+    background: none; }
+
+/*# sourceMappingURL=style.css.map */
