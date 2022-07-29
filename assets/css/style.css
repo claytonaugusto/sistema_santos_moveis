@@ -72,8 +72,8 @@ svg, :not([fill]) {
 input[type]:focus {
   outline: 0; }
 
-.content {
-  width: 88%;
+.login {
+  width: 100%;
   height: auto;
   margin: 0 auto;
   padding: 0; }

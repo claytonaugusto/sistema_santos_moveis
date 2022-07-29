@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="content">
+    <div class="login">
         <div class="login">
             <div class="login-left">
                 <div class="login-left-text">
