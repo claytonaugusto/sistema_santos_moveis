@@ -5,10 +5,45 @@
     border: $border;
     //default 1px    
 }
+@mixin border_bottom{
+    -webkit-border-bottom: $border-box-dashboard;
+    -moz-border-bottom: $border-box-dashboard;
+    -ms-border-bottom: $border-box-dashboard;
+    border-bottom: $border-box-dashboard;
+    //default 1px    
+}
+@mixin border_right{
+    -webkit-border-right: $border-box-dashboard;
+    -moz-border-border-right: $border-box-dashboard;
+    -ms-border-border-right: $border-box-dashboard;
+    border-right: $border-box-dashboard;
+    //default 1px    
+}
 @mixin border-radius($radius){
     -webkit-border-radius: $radius;
     -moz-border-radius: $radius;
     -ms-border-radius: $radius;
     border-radius: $radius;
     //default 6px
+}
+@mixin shadow_bottom {
+    -webkit-box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.13);
+    -moz-box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.13);
+    box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.13);
+}
+@mixin flex-default {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+@mixin flex {
+    display: flex;
+}
+@mixin flex-around {
+    display: flex;
+    justify-content: flex-start;
+}    
+@mixin flex-wrap {
+    flex-wrap: wrap;
 }
